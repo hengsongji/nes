@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/controllerSetting">
+
+    <ListPreference
+        android:defaultValue="@string/controller_type_options_default_value"
+        android:dialogTitle="@string/controllerType"
+        android:entries="@array/controller_type_options"
+        android:entryValues="@array/controller_type_options_values"
+        android:key="@string/key_nes_controller_type_options"
+        android:title="@string/controllerType" />
+
+    <PreferenceCategory android:title="@string/virtualPadSetting">
+        <CheckBoxPreference
+            android:key="@string/key_nes_pad_direction_option"
+            android:summaryOff="@string/padDirect8"
+            android:summaryOn="@string/padDirect4"
+            android:title="@string/padDirectSimply" />@string/virtual_pad
+
+        <com.falcon.nester.preference.SeekBarPreference
+            android:key="@string/key_nes_virtual_pad_transparency_option"
+            android:summary="@string/padTransparencySummary"
+            android:title="@string/padTransparency" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
